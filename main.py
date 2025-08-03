@@ -7,6 +7,10 @@ app = Flask(__name__)
 API_URL = 'https://api.rembg.com/rmbg'
 API_KEY = '7fbf16b4-8b60-4dc2-8738-230be8d8b106'
 
+@app.route('/')
+def home():
+    return '✅ Rembg Proxy is running! Use POST /remove-bg with image file.'
+
 @app.route('/remove-bg', methods=['POST'])
 def remove_bg():
     if 'image' not in request.files:
