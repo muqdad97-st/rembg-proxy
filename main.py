@@ -3,6 +3,7 @@ import requests
 from io import BytesIO
 
 app = Flask(__name__)
+CORS(app)
 
 API_URL = 'https://api.rembg.com/rmbg'
 API_KEY = '7fbf16b4-8b60-4dc2-8738-230be8d8b106'
